@@ -7,14 +7,14 @@ int   A[10],B,C,D;
 int i, j, k;
 int   a[10],row[10],col[10],weight[10];
 
-void update() //ÊäÈëµ½ÎÄ¼ş 
+void update() //è¾“å…¥åˆ°æ–‡ä»¶ 
 {
 	ofstream out("a.txt");
 	if(out){
-		cout<<"ÇëÎÊÓĞ¼¸¸öÂ·ÓÉÆ÷£¿"<<endl;
+		cout<<"è¯·é—®æœ‰å‡ ä¸ªè·¯ç”±å™¨ï¼Ÿ"<<endl;
 		cin>>o;
 		out<<o<<endl;
-		cout<<"ÇëÒÀ´ÎÊäÈëÂ·ÓÉÆ÷µÄ±àºÅ£º"<<endl;	
+		cout<<"è¯·ä¾æ¬¡è¾“å…¥è·¯ç”±å™¨çš„ç¼–å·ï¼š"<<endl;	
 		for(int a=0;a<o;a++)
 		{
 		
@@ -22,12 +22,12 @@ void update() //ÊäÈëµ½ÎÄ¼ş
 		out <<A[o]<<setw(2);
 		} 
 		out<<endl;
-		cout<<"ÇëÎÊÂ·ÓÉ±íÓĞ¼¸Ìõ±ß£¿"<<endl;
+		cout<<"è¯·é—®è·¯ç”±è¡¨æœ‰å‡ æ¡è¾¹ï¼Ÿ"<<endl;
 		cin>>p;
 		out<<p<<endl;
 		for(int b=0;b<p;b++)
 		{
-			cout<<"ÇëÒÀ´ÎÊäÈëÁ½¸öÂ·ÓÉÆ÷µÄ±àºÅ¼°±ßµÄ³¤¶È£º"<<endl;
+			cout<<"è¯·ä¾æ¬¡è¾“å…¥ä¸¤ä¸ªè·¯ç”±å™¨çš„ç¼–å·åŠè¾¹çš„é•¿åº¦ï¼š"<<endl;
 			cin>>B>>C>>D;
 			out<<B-1<<setw(2)<<C-1<<setw(2)<<D-1<<endl;
 		 } 
@@ -37,39 +37,40 @@ void update() //ÊäÈëµ½ÎÄ¼ş
 	
 }
 
-void read() //¶ÁÈëÎÄ¼ş 
+void read() //è¯»å…¥æ–‡ä»¶ 
 {
 
 	FILE *fp;          
 
 	fp = fopen("a.txt", "r");
 
-	fscanf(fp, "%d", &i);//Â·ÓÉÆ÷Êı 
+	fscanf(fp, "%d", &i);//è·¯ç”±å™¨æ•° 
 	for (k = 0; k < i; k++)
 	{
-		fscanf(fp, "%d", &a[k]);//½áµãºÅ 
+		fscanf(fp, "%d", &a[k]);//ç»“ç‚¹å· 
 	}
-	fscanf(fp, "%d", &j);//±ßÊı 
+	fscanf(fp, "%d", &j);//è¾¹æ•° 
 	for (k = 0; k < j; k++)
 	{
-		fscanf(fp, "%d%d%d", &row[k], &col[k], &weight[k]);//ĞĞ ÁĞ È¨Öµ 
+		fscanf(fp, "%d%d%d", &row[k], &col[k], &weight[k]);//è¡Œ åˆ— æƒå€¼ 
 	}
 	fclose(fp);
 	
 	
 }
 int main(){
-	//update();         //×¢Òâ£ºiÊÇµãÊı£¬jÊÇ±ßÊı £¬a[n]ÊÇ¶¥µãºÅ£¬row[k], col[k], weight[k]·Ö±ğÊÇ ĞĞ ÁĞ È¨Öµ
+	//update();         //æ³¨æ„ï¼šiæ˜¯ç‚¹æ•°ï¼Œjæ˜¯è¾¹æ•° ï¼Œa[n]æ˜¯é¡¶ç‚¹å·ï¼Œrow[k], col[k], weight[k]åˆ†åˆ«æ˜¯ è¡Œ åˆ— æƒå€¼
 	read();
-	cout<<"¼¸¸öµã£º"<<i<<endl; 
 	for(int y=0;y<i;y++){
 		cout<<a[y]<<endl;
 	
 	}
-	cout<<"¼¸Ìõ±ß£º"<<j<<endl; 
+	cout<<"å‡ æ¡è¾¹ï¼š"<<j<<endl; 
 	for(int y=0;y<j;y++){
 		cout<<row[y]<<setw(2)<<col[y]<<setw(2)<<weight[y]<<endl;
-	
+		Test[y].pionta=row[y];
+		Test[y].piontb=col[y];
+		Test[y].weight=weight[y];
 		
 	}
 	
