@@ -30,7 +30,7 @@ void update() //输入到文件
 		{
 			cout << "请依次输入两个路由器的编号及边的长度：" << endl;
 			cin >> B >> C >> D;
-			out << B - 1 << setw(2) << C - 1 << setw(2) << D - 1 << endl;
+			out << B - 1 << setw(2) << C - 1 << setw(2) << D  << endl;
 		}
 	}
 	out.close();

@@ -1,22 +1,30 @@
 #include<iostream>
-#include"read.h"
 #include"updata.h"
+
 #include"graph.h"
+Graph gra1;
 using namespace std;
 void menu()
 {
-	int i;
-	cout << "是否第一次使用程序？" << endl;
-	cout << "1、是的" << endl<<"2、不是"<<endl;
+	int i = 0;
+	cout << "要读入标准路由表吗？"<< endl<<"1、是的"<<endl<<"2、不是" << endl;
 	cin >> i;
-	if (i == 1) { update(); }
+	if (i==1)
+	{
+		gra1.create();
+	}
+	cout << "测试" << endl;
+	for (int i = 0; i < gra1.vertexs; i++)//
+	{
+
+		for (int j = 0; j < gra1.vertexs; j++)
+		{
+			if (gra1.arcs[i][j] == max)cout << "*    ";
+			else cout << gra1.arcs[i][j] << "    ";
+		}
+		cout << endl;
+	}
 	
-	int p;
-	
-	Graph gra1;
-	gra1.vertexs = read();
-	
-	gra1.create();
 	
 	cout << "**********************网络路由生成************************\n";
 	cout << "**********************请选择相应实现功能******************\n";
@@ -28,6 +36,7 @@ void menu()
 	cout << "**********************6.更新文件**************************\n";
 	cout << "**********************请输入你的选择**********************\n";
 	cout << endl << "选项：";
+	int p;
 	cin >> p;
 	cout << endl;
 	if (p < 1 || p>6)
@@ -39,17 +48,20 @@ void menu()
 	switch (p)
 	{
 	case 1:
-		int i;
-
-		cout << "请输入你要生成的路由表的起始路由器是第几个路由器" << endl;
-		cin >> i;
-		i--;
-		/*gra1.GetPort();*/
+		
+		for (int i = 0; i < gra1.vertexs; i++)
+		{
+			cout << "第" <<i+1 << "个路由器：" ;
+			gra1.GetPort(i);
+			cout << endl;
+		}
+		
+		
 		//算法
 
 		break;      //路由表输出并打印
-	case 2:/*gra1.Delete_vertex(); break; */  //删除节点
-	case 3:/*gra1.Delete_edge(); break; */  //删除边
+	case 2: {int a = 0; cout << "请问要删除哪个路由器？" << endl; cin >> a; gra1.Delete_vertex(a-1); }break;   //删除节点
+	case 3: {int a = 0; int b = 0; cout << "请问要删除的边两边是哪两个路由器？" << endl; cin >> a>>b; gra1.Delete_edge(a-1, b-1); } break;   //删除边
 	case 4:gra1.Insert_edge(); break;
 	case 5:gra1.Insert_vertex(); break;      //退出
 	case 6:update(); break;      //退出

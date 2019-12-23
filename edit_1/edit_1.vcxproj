@@ -115,18 +115,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Graph.cpp" />
+    <ClCompile Include="Graph_deleteEdge.cpp" />
+    <ClCompile Include="Graph_deletePoint.cpp" />
+    <ClCompile Include="Graph_getPort.cpp" />
     <ClCompile Include="G_create.cpp" />
     <ClCompile Include="G_insert_vertex.cpp" />
     <ClCompile Include="G_insert_edge.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="menu.cpp" />
-    <ClCompile Include="read.cpp" />
     <ClCompile Include="updata.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="graph.h" />
     <ClInclude Include="menu.h" />
-    <ClInclude Include="read.h" />
     <ClInclude Include="updata.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
