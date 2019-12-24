@@ -43,7 +43,7 @@ int* Graph::GetPort(int point)
 		}
 	}
 	cout << endl;
-	for (int i = 0; i < vertexs; i++)	cout <<dist[i] << "  ";
+	
 	for (int i = 0; i < vertexs; ++i)
 	{
 		if (path[i] == -1) port[i] = -1;
@@ -57,8 +57,8 @@ int* Graph::GetPort(int point)
 			}
 			port[i] = temp;
 		}
-		
-		cout<< port[i]+1 << " ";
+		if (port[i] == -1)cout << "localhost"<< endl; 
+		else { cout << "TO NO." << i + 1 << "`s port is " << port[i] + 1 << " " << endl; }
 	}
 	return port;
 }
