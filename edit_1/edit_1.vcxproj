@@ -122,10 +122,10 @@
     <ClCompile Include="G_create.cpp" />
     <ClCompile Include="G_insert_vertex.cpp" />
     <ClCompile Include="G_insert_edge.cpp" />
-    <ClCompile Include="huNg.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="menu.cpp" />
     <ClCompile Include="updata.cpp" />
+    <ClCompile Include="源.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="graph.h" />
