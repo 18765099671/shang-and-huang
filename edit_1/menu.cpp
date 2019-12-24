@@ -22,7 +22,7 @@ void menu()
 			if (gra1.arcs[i][j] == max)cout << "*    ";
 			else cout << gra1.arcs[i][j] << "    ";
 		}
-		cout << endl;
+		cout << endl << endl;
 	}
 	
 	
