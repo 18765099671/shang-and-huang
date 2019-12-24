@@ -4,6 +4,7 @@
 #include"graph.h"
 Graph gra1;
 using namespace std;
+int oo = 0;
 void menu()
 {
 	int i = 0;
@@ -48,13 +49,15 @@ void menu()
 	switch (p)
 	{
 	case 1:
+		cout << "请输入第几个路由器？" << endl;
 		
-		for (int i = 0; i < gra1.vertexs; i++)
-		{
-			cout << "第" <<i+1 << "个路由器：" ;
-			gra1.GetPort(i);
+		cin >> oo;
+		/*for (int i = 0; i < gra1.vertexs; i++)
+		{*/
+			cout << "第" <<oo << "个路由器：" ;
+			gra1.GetPort(oo-1);
 			cout << endl;
-		}
+		/*}*/
 		
 		
 		//算法
