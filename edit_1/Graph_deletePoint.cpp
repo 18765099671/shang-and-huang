@@ -5,6 +5,7 @@ using namespace std;
 
 bool Graph::Delete_vertex(int point)
 {
+	cout << "黄恩祺" << endl;
 	if (point >= vertexs)
 	{
 		cout << "没有该路由器！" << endl;
