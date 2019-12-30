@@ -57,7 +57,8 @@ void menu()
 	{
 		if (gra1.arcs[oo - 1][oo - 1] != max)
 		{
-			cout << "第" << oo << "个路由器：";
+			cout << "第" << oo << "个路由器："<<endl;
+			cout << "Destination     Next" << endl;
 			int* temp = gra1.GetPort(oo - 1);
 			gra1.writeFile(temp, oo);
 			cout << endl;
