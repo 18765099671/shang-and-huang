@@ -21,7 +21,7 @@ void Graph::writeFile(int* port,int num)
 	{
 		if (port[i] == -1)
 		{
-			file << i + 1 << "     localhost" << endl;
+			file << i +1<< "     localhost" << endl;
 		}
 		else if (port[i] == -2)
 		{
@@ -29,7 +29,7 @@ void Graph::writeFile(int* port,int num)
 		}
 		else
 		{
-			file << i << "     " << port[i] << endl;
+			file << i +1<< "     " << port[i] << endl;
 		}
 	}
 }
