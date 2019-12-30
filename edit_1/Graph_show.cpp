@@ -7,6 +7,16 @@ using namespace std;
 
 void Graph::show(int* port)
 {
+	bool b = true;
+	for (int i = 0; i < vertexs; ++i)
+	{
+		if (port[i] != -1) b = false;
+	}
+	if (b)
+	{
+		cout << "该节点已从网络上断开！" << endl;
+		return;
+	}
 	cout << "destination   next" << endl;
 	for (int i = 0; i < vertexs; ++i)
 	{

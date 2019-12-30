@@ -17,7 +17,6 @@ int* Graph::GetPort(int point)
 		dist[i]=arcs[point][i];
 		if (i != point && dist[i] < max) path[i] = point;
 		else path[i] = -1;
-		port[i] = -2;
 	}
 
 	group[point]=true;
