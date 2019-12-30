@@ -12,6 +12,5 @@ bool Graph::Delete_vertex(int point)
 	}
 	for (int i = 0; i < vertexs; i++) { arcs[point][i] = max; arcs[i][point] = max;
 	}
-	vertexs--;
 	return true;
 }

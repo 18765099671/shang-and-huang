@@ -14,4 +14,5 @@ public:
 	void Insert_vertex();
 	void create();
 	void writeFile(int* port,int num);
+	void show(int* port);
 };

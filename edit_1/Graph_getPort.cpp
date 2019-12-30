@@ -58,32 +58,12 @@ int* Graph::GetPort(int point)
 				temp = path[temp];
 			}
 			port[i] = temp;
-		}
-		
-		if (arcs[i][i] != max) {
+		}	
+		/*if (arcs[i][i] != max) {
 			if (port[i] == -1)cout << "localhost" << endl;
 			else { cout << i + 1<<"              " << port[i] + 1 << " " << endl; 
 			}
-		}
-		
-		/*for (int i = 0; i < vertexs; ++i)
-		{
-			if (port[i] == -1)
-			{
-				cout << i + 1 << "                  localhost" << endl;
-			}
-			else if (port[i] == -2)
-			{
-				continue;
-			}
-			else
-			{
-				cout << i + 1 << "                  " << port[i] + 1 << endl;
-			}
 		}*/
-
-
-		
 	}
 	return port;
 }
