@@ -7,6 +7,7 @@ int i, j, k;
 
 void Graph::create() {
 	/*cout << "1" << endl;*/
+	cout << "尚文锴" << endl;
 	cout << "文件读入中。。。" << endl;
 	FILE *fp;
 
