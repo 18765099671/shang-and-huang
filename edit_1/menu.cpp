@@ -52,13 +52,13 @@ void menu()
 		cout << "请输入第几个路由器？" << endl;
 		
 		cin >> oo;
-		/*for (int i = 0; i < gra1.vertexs; i++)
-		{*/
-			cout << "第" <<oo << "个路由器：" ;
-			gra1.GetPort(oo-1);
+		if (gra1.arcs[oo-1][oo-1] != max)
+		{
+			cout << "第" << oo << "个路由器：";
+			gra1.GetPort(oo - 1);
 			cout << endl;
-		/*}*/
-		
+		}
+		else cout << "结点已被删除。" << endl;
 		
 		//算法
 

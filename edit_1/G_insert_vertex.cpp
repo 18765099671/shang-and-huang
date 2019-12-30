@@ -3,7 +3,7 @@
 using namespace std;
 
 void Graph::Insert_vertex()
-{
+{	
 	int n = 0;
 	cout << "这个点连接了几条边？" << endl;
 	cin >> n;

@@ -5,7 +5,7 @@ using namespace std;
 
 bool Graph::Delete_vertex(int point)
 {
-	if(point>=vertexs) return false;
+	/*if(point>=vertexs) return false;
 	--vertexs;
 
 	int** newMatrix=new int*[vertexs];
@@ -24,6 +24,9 @@ bool Graph::Delete_vertex(int point)
 		}
 	}
 
-	arcs=newMatrix;
+	arcs=newMatrix;*/
+	for (int i = 0; i < vertexs; i++) { arcs[point][i] = max; arcs[i][point] = max;
+	}
+	vertexs--;
 	return true;
 }

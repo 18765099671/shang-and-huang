@@ -17,7 +17,8 @@ int* Graph::GetPort(int point)
 		dist[i]=arcs[point][i];
 		if (i != point && dist[i] < max) path[i] = point;
 		else path[i] = -1;
-	}
+			}
+
 	group[point]=true;
 	for(int i=0;i< vertexs-1;++i)   //求最短路径
 	{
@@ -57,8 +58,13 @@ int* Graph::GetPort(int point)
 			}
 			port[i] = temp;
 		}
-		if (port[i] == -1)cout << "localhost"<< endl; 
-		else { cout << "TO NO." << i + 1 << "`s port is " << port[i] + 1 << " " << endl; }
+		if (arcs[i][i] != max) {
+			if (port[i] == -1)cout << "localhost" << endl;
+			else { cout << "TO NO." << i + 1 << "`s port is " << port[i] + 1 << " " << endl; 
+			cout << dist[i] << endl;
+			}
+		}
+		
 	}
 	return port;
 }
