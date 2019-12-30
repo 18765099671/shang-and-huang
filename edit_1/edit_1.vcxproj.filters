@@ -45,6 +45,9 @@
     <ClCompile Include="Graph.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Graph_writeFile.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="menu.h">

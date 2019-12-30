@@ -55,7 +55,8 @@ void menu()
 		if (gra1.arcs[oo-1][oo-1] != max)
 		{
 			cout << "第" << oo << "个路由器：";
-			gra1.GetPort(oo - 1);
+			int* temp = gra1.GetPort(oo - 1);
+			gra1.writeFile(temp, oo);
 			cout << endl;
 		}
 		else cout << "结点已被删除。" << endl;
@@ -63,7 +64,7 @@ void menu()
 		//算法
 
 		break;      //路由表输出并打印
-	case 2: {int a = 0; cout << "请问要删除哪个路由器？" << endl; cin >> a; gra1.Delete_vertex(a-1); }break;   //删除节点
+	case 2: {int a = 0; cout << "请问要删除哪个路由器？" << endl; cin >> a; gra1.Delete_vertex(a-1);}break;   //删除节点
 	case 3: {int a = 0; int b = 0; cout << "请问要删除的边两边是哪两个路由器？" << endl; cin >> a>>b; gra1.Delete_edge(a-1, b-1); } break;   //删除边
 	case 4:gra1.Insert_edge(); break;
 	case 5:gra1.Insert_vertex(); break;      //退出

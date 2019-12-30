@@ -13,5 +13,5 @@ public:
 	void Insert_edge();
 	void Insert_vertex();
 	void create();
-
+	void writeFile(int* port,int num);
 };

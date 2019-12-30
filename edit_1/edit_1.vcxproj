@@ -119,6 +119,7 @@
     <ClCompile Include="Graph_deleteEdge.cpp" />
     <ClCompile Include="Graph_deletePoint.cpp" />
     <ClCompile Include="Graph_getPort.cpp" />
+    <ClCompile Include="Graph_writeFile.cpp" />
     <ClCompile Include="G_create.cpp" />
     <ClCompile Include="G_insert_vertex.cpp" />
     <ClCompile Include="G_insert_edge.cpp" />

@@ -17,7 +17,8 @@ int* Graph::GetPort(int point)
 		dist[i]=arcs[point][i];
 		if (i != point && dist[i] < max) path[i] = point;
 		else path[i] = -1;
-			}
+		port[i] = -2;
+	}
 
 	group[point]=true;
 	for(int i=0;i< vertexs-1;++i)   //求最短路径
