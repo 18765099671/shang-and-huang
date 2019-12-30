@@ -52,7 +52,10 @@ void menu()
 		cout << "请输入第几个路由器？" << endl;
 		
 		cin >> oo;
-		if (gra1.arcs[oo-1][oo-1] != max)
+	if(oo>gra1.vertexs)cout << "请输入正确的路由器！" << endl;
+	else
+	{
+		if (gra1.arcs[oo - 1][oo - 1] != max)
 		{
 			cout << "第" << oo << "个路由器：";
 			int* temp = gra1.GetPort(oo - 1);
@@ -60,7 +63,7 @@ void menu()
 			cout << endl;
 		}
 		else cout << "结点已被删除。" << endl;
-		
+	}
 		//算法
 
 		break;      //路由表输出并打印
