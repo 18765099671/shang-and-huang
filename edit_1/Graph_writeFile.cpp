@@ -29,7 +29,7 @@ void Graph::writeFile(int* port,int num)
 		}
 		else
 		{
-			file << i +1<< "     " << port[i] << endl;
+			file << i + 1 << "     " << port[i] + 1 << endl;
 		}
 	}
 }
